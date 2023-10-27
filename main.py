@@ -19,7 +19,7 @@ async def me(list):
         await client.send_message('chtwrsbot',"🏅Me")
 
 # Clientes 
-bots=TelegramClient(StringSession(bot_string_session), api_id, api_hash)
+bot=TelegramClient(StringSession(bot_string_session), api_id, api_hash)
 
 bot_alejandro=TelegramClient(StringSession(bot_alejandro_string_session), api_id, api_hash)
 
@@ -37,7 +37,7 @@ dariel = TelegramClient(StringSession(dariel_string_session), api_id, api_hash)
 
 alejandro = TelegramClient(StringSession(alejandro_string_session), api_id, api_hash)
 
-all_bots = [bots,bot_alejandro,bot_dariel]
+all_bots = [bot,bot_alejandro,bot_dariel]
 all_client = [yo,dariel,alejandro]
 
 #referencia en consola
@@ -66,28 +66,28 @@ for client in all_client:
 
 
 #bot handlers
-for bot in all_bots:
-    bot.add_event_handler(handlers.handle_StartBot)
-    bot.add_event_handler(handlers.handle_status_bot)
-    bot.add_event_handler(handlers.handle_suscrip_bot)
-    bot.add_event_handler(handlers.handle_config_bot)
-    bot.add_event_handler(handlers.handle_quest_bot)
-    bot.add_event_handler(handlers.handleButtomBot1)
-    bot.add_event_handler(handlers.handle_mobs_bot)
-    bot.add_event_handler(handlers.handleButtomBot)
+#for bot in all_bots:
+bot.add_event_handler(handlers.handle_StartBot)
+bot.add_event_handler(handlers.handle_status_bot)
+bot.add_event_handler(handlers.handle_suscrip_bot)
+bot.add_event_handler(handlers.handle_config_bot)
+bot.add_event_handler(handlers.handle_quest_bot)
+bot.add_event_handler(handlers.handleButtomBot1)
+bot.add_event_handler(handlers.handle_mobs_bot)
+bot.add_event_handler(handlers.handleButtomBot)
     #bot.add_event_handler(handlers.handle_quest_change_bot)
     #bot.add_event_handler(handlers.handle_hunt_on_bot)
     #bot.add_event_handler(handlers.handle_hunt_off_bot)
     #bot.add_event_handler(handlers.handle_ayudaMobs_chat_bot)
     #bot.add_event_handler(handlers.handle_removeMobs_chat_bot)
-    bot.add_event_handler(handlers.handle_set_arena_time_bot)
-    bot.add_event_handler(handlers.handle_go_bot)
-    bot.add_event_handler(handlers.handleButtomBot2)
+bot.add_event_handler(handlers.handle_set_arena_time_bot)
+bot.add_event_handler(handlers.handle_go_bot)
+bot.add_event_handler(handlers.handleButtomBot2)
     #bot.add_event_handler(handlers.handle_set_trader_id_bot)
-    bot.add_event_handler(handlers.handle_auction_bot)
-    bot.add_event_handler(handlers.handleButtomBot3)
-    bot.add_event_handler(handlers.handle_pogs_bot)
-    bot.add_event_handler(handlers.handleButtomBot4)
+bot.add_event_handler(handlers.handle_auction_bot)
+bot.add_event_handler(handlers.handleButtomBot3)
+bot.add_event_handler(handlers.handle_pogs_bot)
+bot.add_event_handler(handlers.handleButtomBot4)
 
 
 
@@ -96,8 +96,8 @@ for bot in all_bots:
 
 print('Registrando clientes')
 try:
-    bots.start()
-except: print('bots fallo')
+    bot.start()
+except: print('bot fallo')
 '''try:
     bot_alejandro.start()
 except: print('bot_alejandro fallo')
