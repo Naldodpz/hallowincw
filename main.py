@@ -111,7 +111,7 @@ try:
         
 except: print('Fallo de cliente 1')
 
-'''try: 
+try: 
     dariel.start()
     loop.create_task(handlers.register(dariel,quest=True,craft=True,arena=True,go=True,auction=True,hunt=True,pogs=True,scroll=True,orden=True,ranger=False,admin=True))
         
@@ -121,7 +121,7 @@ try:
     alejandro.start()
     loop.create_task(handlers.register(alejandro,quest=True,craft=True,arena=True,go=True,auction=True,hunt=True,pogs=True,scroll=True,orden=True,ranger=False,admin=True))
         
-except: print('Fallo de cliente 3')'''
+except: print('Fallo de cliente 3')
 
 loop.create_task(handlers.scheduleArenas())
 loop.create_task(me(all_client))

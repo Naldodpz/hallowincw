@@ -1,6 +1,6 @@
-# fly.toml file generated for cwhallo on 2023-10-26T05:01:55-04:00
+# fly.toml file generated for naldohallowin on 2023-10-26T07:04:13-04:00
 
-app = "cwhallo"
+app = "naldohallowin"
 kill_signal = "SIGINT"
 kill_timeout = 5
 mounts = []
