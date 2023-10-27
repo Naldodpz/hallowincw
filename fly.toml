@@ -1,6 +1,6 @@
-# fly.toml file generated for naldohallowin on 2023-10-26T07:04:13-04:00
+# fly.toml file generated for naldoevent on 2023-10-27T07:44:29-04:00
 
-app = "naldohallowin"
+app = "naldoevent"
 kill_signal = "SIGINT"
 kill_timeout = 5
 mounts = []
